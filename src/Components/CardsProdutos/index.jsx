@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import './styles.css';
 
-const CardProdutos = () => {
+export default function CardProdutos  ()  {
   const [produtos, setProdutos] = useState([]);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const CardProdutos = () => {
         {produtos.map((produtos) => {
           return (
             <div
-              className='box-produto col-3 d-flex-column justify-content-center align-items-center'
+              className='box-produto justify-content-center d-flex-column  col-3 align-items-center'
               id={produtos.categoria}
               key={produtos.idproduto}
             >
@@ -66,4 +66,3 @@ const CardProdutos = () => {
   );
 };
 
-export default CardProdutos;

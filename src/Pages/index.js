@@ -1,7 +1,7 @@
- function Home() {
+export default function Home() {
     return (
        
-        <div class="container-fluid">  
+        <div style={{ height: '60vh', margin: '25px' }}>  
 
                <h1>Seja Bem Vindo(a) !</h1>
                <hr/>
@@ -11,4 +11,3 @@
        
     )
 }
-export default Home;

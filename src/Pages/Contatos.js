@@ -1,17 +1,17 @@
-import React from 'react';
+
 import './Contatos.css';
 import email from '../imagens/email.jpg';
 import Whatsapp_1 from '../imagens/Whatsapp_1.png';
 export default function Contatos() {
     return (
        
-            <div>
+            <>
                     <header>
                         <h2> Fale Conosco </h2>
                         <hr/>
                     </header>
 
-                        <section class="completo-contatos">
+                        <section className="completo-contatos">
 
                             <div className="contatos">
 
@@ -26,10 +26,26 @@ export default function Contatos() {
                                 <p>(11) 99999-9999 </p>   
 
                             </div>
-                            
+                   </section>  
+                   <div>       
+                  
+                <form  method ="POST" action="" >
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Nome</label>
+                            <input type="text" name="nome" className="form-control" id="exampleFormControlInput1" />
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Mensagem</label>
+                            <textarea className="form-control" name="mensagem" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <input class="btn btn-info" type="submit"  value="Enviar" />
+                        
+                 </form>
 
-                   </section>         
-       </div>
+                 </div>    
+       
+       </>
        
 
      
