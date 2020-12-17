@@ -1,30 +1,7 @@
 CREATE DATABASE IF NOT EXISTS `fseletro` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `fseletro`;
 
-CREATE TABLE `comentarios` (
-  `id` int(11) NOT NULL,
-  `nome` varchar(200) DEFAULT NULL,
-  `mensagem` varchar(255) DEFAULT NULL,
-  `data` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `comentarios` (`id`, `nome`, `mensagem`, `data`) VALUES
-(10, 'Patrick Ferreira', 'Estou muito satisfeito', '2020-10-31 10:43:46'),
-(12, 'Maria', 'Chegou Muito Rapido!', '2020-11-07 09:21:20');
-
-CREATE TABLE `pedidos` (
-  `id_pedidos` int(11) NOT NULL,
-  `produtos_id` int(11) DEFAULT NULL,
-  `quantidade` int(11) DEFAULT NULL,
-  `nome_cliente` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-INSERT INTO `pedidos` (`id_pedidos`, `produto_id`, `quantidade`, `nome_cliente`) VALUES
-(1, 12, 70, 'Patrick'),
-(2, 5, 60, 'Jessica'),
-(3, 8, 15, 'Amanda'),
-(4, 6, 28, 'Pedro');
-(5, 3, 48, 'Jose');
 
 CREATE TABLE `produtos` (
   `idproduto` int(11) NOT NULL AUTO_INCREMENT,
@@ -48,6 +25,34 @@ INSERT INTO `produtos` (`categoria`, `descricao`, `preco`, `precofinal`, `imagem
 ('lavalouca', 'Lava Louça Compacta 8 Serviços Branca 127V Brastemp', '1970.50', '1730.61', './imagens/lava_louca_compacta.jpeg'),
 ('lavadora', 'Lavadora de Roupas Brastemp 11 kg com Turbo Perfomance Branca', '1699.00', '1214.00', './imagens/Lavadora_brastemp.jpeg'),
 ('lavadora', 'Lavadora de Roupas Philco Inverter 12KG', '2399.90', '2179.90', './imagens/lavadora_philco.jpeg');
+
+CREATE TABLE `pedidos` (
+  `id_pedidos` int(11) NOT NULL,
+  `produtos_id` int(11) DEFAULT NULL,
+  `quantidade` int(11) DEFAULT NULL,
+  `nome_cliente` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `pedidos` (`id_pedidos`, `produto_id`, `quantidade`, `nome_cliente`) VALUES
+(1, 12, 70, 'Patrick'),
+(2, 5, 60, 'Jessica'),
+(3, 8, 15, 'Amanda'),
+(4, 6, 28, 'Pedro');
+(5, 3, 48, 'Jose');
+
+
+
+
+CREATE TABLE `comentarios` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(200) DEFAULT NULL,
+  `mensagem` varchar(255) DEFAULT NULL,
+  `data` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `comentarios` (`id`, `nome`, `mensagem`, `data`) VALUES
+(10, 'Patrick Ferreira', 'Estou muito satisfeito', '2020-10-31 10:43:46'),
+(12, 'Maria', 'Chegou Muito Rapido!', '2020-11-07 09:21:20');
 
 --- SELECAO JOIN ENTRE A TABELA PEDIDOS E PRODUTOS
 SELECT * FROM pedidos JOIN produto ON pedidos.produto_id = produto.idproduto;
