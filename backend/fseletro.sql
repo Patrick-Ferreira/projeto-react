@@ -35,19 +35,19 @@ CREATE TABLE `produtos` (
   `imagem` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `produtos` (`idproduto`, `categoria`, `descricao`, `preco`, `precofinal`, `imagem`) VALUES
-(1, 'geladeira', 'Geladeira Frost Free Brastemp Side Inverse 540 litros', '6389.00', '5019.00', './imagens/Geladeira_Brastemp.jpeg'),
-(2, 'geladeira', 'Geladeira Frost Free Brastemp Branca 375 litros', '2068.60', '1910.90', './imagens/Refrigerador_brastemp.jpeg'),
-(3, 'geladeira', 'Geladeira Frost Free Consul Prata 340 litros', '2199.90', '2069.00', './imagens/Geladeira_Consul.jpeg'),
-(4, 'fogao', 'Fogão 4 Bocas Consul Inox com Mesa de Vidro', '1209.90', '1129.00', './imagens/Fogao_consul.jpeg'),
-(5, 'fogao', 'Fogão de Piso 4 Bocas Atlas Monaco com Atendimento Automático', '609.90', '519.70', './imagens/fogao_Atlas_monaco.jpeg'),
-(6, 'microondas', 'Micro-ondas Consul 32 Litros Inox 220V', '580.90', '409.88', './imagens/microondas_consul.jpeg'),
-(7, 'microondas', 'Microondas 25L Espelhado Philco 220V', '508.70', '464.53', './imagens/microondas_Philco.jpeg'),
-(8, 'microondas', 'Forno de Microondas Electrolux 20L Branco', '459.90', '436.05', './imagens/Microondas_Eletrolux.jpeg'),
-(9, 'lavalouca', 'Lava-Louça Electrolux Inox com 10 Serviços, 06 Programas de Lavagens.', '3599.00', '2799.90', './imagens/lava_louca_eletrolux.jpeg'),
-(10, 'lavalouca', 'Lava Louça Compacta 8 Serviços Branca 127V Brastemp', '1970.50', '1730.61', './imagens/lava_louca_compacta.jpeg'),
-(11, 'lavadora', 'Lavadora de Roupas Brastemp 11 kg com Turbo Perfomance Branca', '1699.00', '1214.00', './imagens/Lavadora_brastemp.jpeg'),
-(12, 'lavadora', 'Lavadora de Roupas Philco Inverter 12KG', '2399.90', '2179.90', './imagens/lavadora_philco.jpeg');
+INSERT INTO `produtos` (`categoria`, `descricao`, `preco`, `precofinal`, `imagem`) VALUES
+('geladeira', 'Geladeira Frost Free Brastemp Side Inverse 540 litros', '6389.00', '5019.00', './imagens/Geladeira_Brastemp.jpeg'),
+('geladeira', 'Geladeira Frost Free Brastemp Branca 375 litros', '2068.60', '1910.90', './imagens/Refrigerador_brastemp.jpeg'),
+('geladeira', 'Geladeira Frost Free Consul Prata 340 litros', '2199.90', '2069.00', './imagens/Geladeira_Consul.jpeg'),
+('fogao', 'Fogão 4 Bocas Consul Inox com Mesa de Vidro', '1209.90', '1129.00', './imagens/Fogao_consul.jpeg'),
+('fogao', 'Fogão de Piso 4 Bocas Atlas Monaco com Atendimento Automático', '609.90', '519.70', './imagens/fogao_Atlas_monaco.jpeg'),
+('microondas', 'Micro-ondas Consul 32 Litros Inox 220V', '580.90', '409.88', './imagens/microondas_consul.jpeg'),
+('microondas', 'Microondas 25L Espelhado Philco 220V', '508.70', '464.53', './imagens/microondas_Philco.jpeg'),
+('microondas', 'Forno de Microondas Electrolux 20L Branco', '459.90', '436.05', './imagens/Microondas_Eletrolux.jpeg'),
+('lavalouca', 'Lava-Louça Electrolux Inox com 10 Serviços, 06 Programas de Lavagens.', '3599.00', '2799.90', './imagens/lava_louca_eletrolux.jpeg'),
+('lavalouca', 'Lava Louça Compacta 8 Serviços Branca 127V Brastemp', '1970.50', '1730.61', './imagens/lava_louca_compacta.jpeg'),
+('lavadora', 'Lavadora de Roupas Brastemp 11 kg com Turbo Perfomance Branca', '1699.00', '1214.00', './imagens/Lavadora_brastemp.jpeg'),
+('lavadora', 'Lavadora de Roupas Philco Inverter 12KG', '2399.90', '2179.90', './imagens/lavadora_philco.jpeg');
 
 --- SELECAO JOIN ENTRE A TABELA PEDIDOS E PRODUTOS
 SELECT * FROM pedidos JOIN produto ON pedidos.produto_id = produto.idproduto;

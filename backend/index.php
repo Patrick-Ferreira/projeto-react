@@ -1,6 +1,6 @@
 <?php
 
-header("Access-Control-Allow-Origin:*"); // Permite que outras aplicações consumam a api //  //Indicação de arquivo JSON 
+header("Access-Control-Allow-Origin:*"); // Torna possivel a api ser consumida por outras aplicações  //Indica um arquivo do tipo JSON 
 header("Content-type: application/json");
 
 require './Models/Produto.php';
